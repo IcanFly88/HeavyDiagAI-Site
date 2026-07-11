@@ -263,6 +263,13 @@
   .foot { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
   .foot .fmono { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; }
   .disclaim { margin-top: 1.4rem; font-size: .8rem; color: var(--ink-2); max-width: 64ch; }
+  .adapter-cta { margin-top: clamp(1.6rem,3.5vw,2.6rem); display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; padding: clamp(1.2rem,2.6vw,1.7rem); border-radius: 16px; background: var(--panel); box-shadow: inset 0 0 0 1px var(--hair); }
+  .adapter-cta .ac-txt { flex: 1 1 300px; }
+  .adapter-cta .ac-eyebrow { font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+  .adapter-cta h3 { font-size: clamp(1.05rem,2vw,1.3rem); margin: .35rem 0 .45rem; line-height: 1.15; }
+  .adapter-cta p { color: var(--ink-2); font-size: .9rem; line-height: 1.5; max-width: 54ch; margin: 0; }
+  .adapter-cta .ac-act { display: flex; flex-direction: column; gap: .55rem; align-items: flex-start; }
+  .adapter-cta .ac-note { font-family: var(--mono); font-size: .62rem; letter-spacing: .02em; color: var(--ink-2); max-width: 36ch; line-height: 1.4; }
 
   .rv { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .rv.in { opacity: 1; transform: none; }
@@ -493,6 +500,17 @@
         <div class="step rv"><div class="sn" data-i18n="step_n2">2. LÉPÉS</div><h3 data-i18n="step2_h"></h3><p data-i18n="step2_p"></p></div>
         <div class="step rv"><div class="sn" data-i18n="step_n3">3. LÉPÉS</div><h3 data-i18n="step3_h"></h3><p data-i18n="step3_p"></p></div>
       </div>
+      <div class="adapter-cta rv">
+        <div class="ac-txt">
+          <div class="ac-eyebrow" data-i18n="adapter_eyebrow">Ajánlott hardver</div>
+          <h3 data-i18n="adapter_h">A bevált adapter: OBDLink CX</h3>
+          <p data-i18n="adapter_p"></p>
+        </div>
+        <div class="ac-act">
+          <a class="btn btn-primary" href="https://www.amazon.de/dp/B08NFLL3NT?tag=autoguardian-21&amp;linkCode=ll1&amp;linkId=dac58c2edecc88905017ac1f60581268" target="_blank" rel="sponsored nofollow noopener"><span data-i18n="adapter_btn">OBDLink CX az Amazonon</span> <span aria-hidden="true">↗</span></a>
+          <span class="ac-note" data-i18n="affiliate_note"></span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -515,6 +533,7 @@
         <div class="fmono" data-i18n="foot_tag">SAE J1939 · A terepre tervezve · 2026</div>
       </div>
       <p class="disclaim" data-i18n="disclaim"></p>
+      <p class="disclaim" data-i18n="affiliate_note" style="margin-top:.7rem"></p>
     </div>
   </footer>
 </div>
@@ -530,6 +549,7 @@
 
   var T = {
     hu: {
+      adapter_eyebrow:"Ajánlott hardver", adapter_h:"A bevált adapter: OBDLink CX", adapter_p:"Ezekhez a gépekhez megbízható J1939 Bluetooth-olvasó kell. Mi az OBDLink CX-et (Bluetooth 5.1) használjuk 9-tűs Deutsch → OBD2 kábellel — ez az, amelyik stabilan csatlakozik a J1939 buszra.", adapter_btn:"OBDLink CX az Amazonon", affiliate_note:"Amazon Partnerként a minősített vásárlások után jutalékot kapunk. Ez a vásárlónak nem jelent többletköltséget.",
       shot0_t:"Áttekintés", shot0_d:"Állapotpontszám",
       shot1_t:"Élő adatok", shot1_d:"Valós idejű SPN",
       shot2_t:"Hibakódok", shot2_d:"Aktív és tárolt DTC",
@@ -571,6 +591,7 @@
       disclaim:"A HeavyDiag AI az SAE J1939 buszon olvas és diagnosztizál. Gép-állapotinformációt és diagnosztikai javaslatokat ad — nem helyettesíti a szakszervizt vagy az OEM programozó eszközöket, és nem iktat ki emissziós berendezést."
     },
     en: {
+      adapter_eyebrow:"Recommended hardware", adapter_h:"The adapter that works: OBDLink CX", adapter_p:"These machines need a reliable J1939 Bluetooth reader. We use the OBDLink CX (Bluetooth 5.1) with a 9-pin Deutsch → OBD2 cable — it is the one that connects to the J1939 bus reliably.", adapter_btn:"Get the OBDLink CX on Amazon", affiliate_note:"As an Amazon Associate we earn from qualifying purchases. This costs you nothing extra.",
       shot0_t:"Overview", shot0_d:"Health score",
       shot1_t:"Live data", shot1_d:"Real-time SPN",
       shot2_t:"Fault codes", shot2_d:"Active & stored DTCs",
@@ -612,6 +633,7 @@
       disclaim:"HeavyDiag AI reads and diagnoses over the SAE J1939 bus. It provides machine-status information and diagnostic suggestions — it is not a replacement for professional service or OEM programming tools, and does not disable emissions equipment."
     },
     de: {
+      adapter_eyebrow:"Empfohlene Hardware", adapter_h:"Der bewährte Adapter: OBDLink CX", adapter_p:"Diese Maschinen brauchen einen zuverlässigen J1939-Bluetooth-Leser. Wir verwenden den OBDLink CX (Bluetooth 5.1) mit einem 9-poligen Deutsch → OBD2-Kabel — er verbindet sich zuverlässig mit dem J1939-Bus.", adapter_btn:"OBDLink CX bei Amazon", affiliate_note:"Als Amazon-Partner verdienen wir an qualifizierten Käufen. Für dich entstehen keine Mehrkosten.",
       shot0_t:"Übersicht", shot0_d:"Zustandswert",
       shot1_t:"Live-Daten", shot1_d:"SPN in Echtzeit",
       shot2_t:"Fehlercodes", shot2_d:"Aktive & gespeicherte DTC",
@@ -653,6 +675,7 @@
       disclaim:"HeavyDiag AI liest und diagnostiziert über den SAE-J1939-Bus. Es liefert Maschinenstatus-Informationen und Diagnosevorschläge — kein Ersatz für professionelle Wartung oder OEM-Programmierwerkzeuge und deaktiviert keine Emissionsausrüstung."
     },
     fr: {
+      adapter_eyebrow:"Matériel recommandé", adapter_h:"L’adaptateur qui fonctionne : OBDLink CX", adapter_p:"Ces machines nécessitent un lecteur Bluetooth J1939 fiable. Nous utilisons l’OBDLink CX (Bluetooth 5.1) avec un câble Deutsch 9 broches → OBD2 — c’est celui qui se connecte de façon fiable au bus J1939.", adapter_btn:"OBDLink CX sur Amazon", affiliate_note:"En tant que partenaire Amazon, nous percevons une commission sur les achats éligibles. Sans coût supplémentaire pour vous.",
       shot0_t:"Aperçu", shot0_d:"Indice d'état",
       shot1_t:"Données live", shot1_d:"SPN en temps réel",
       shot2_t:"Codes défaut", shot2_d:"DTC actifs et stockés",
@@ -694,6 +717,7 @@
       disclaim:"HeavyDiag AI lit et diagnostique via le bus SAE J1939. Il fournit des informations d'état et des suggestions de diagnostic — il ne remplace pas un service professionnel ni les outils de programmation OEM, et ne désactive pas les équipements antipollution."
     },
     es: {
+      adapter_eyebrow:"Hardware recomendado", adapter_h:"El adaptador que funciona: OBDLink CX", adapter_p:"Estas máquinas necesitan un lector Bluetooth J1939 fiable. Usamos el OBDLink CX (Bluetooth 5.1) con un cable Deutsch de 9 pines → OBD2: es el que se conecta de forma fiable al bus J1939.", adapter_btn:"OBDLink CX en Amazon", affiliate_note:"Como afiliados de Amazon, ganamos con las compras que cumplen los requisitos. Sin coste adicional para ti.",
       shot0_t:"Resumen", shot0_d:"Índice de estado",
       shot1_t:"Datos en vivo", shot1_d:"SPN en tiempo real",
       shot2_t:"Códigos de fallo", shot2_d:"DTC activos y guardados",
@@ -735,6 +759,7 @@
       disclaim:"HeavyDiag AI lee y diagnostica por el bus SAE J1939. Ofrece información de estado y sugerencias de diagnóstico — no sustituye al servicio profesional ni a las herramientas de programación OEM, y no desactiva equipos de emisiones."
     },
     it: {
+      adapter_eyebrow:"Hardware consigliato", adapter_h:"L’adattatore giusto: OBDLink CX", adapter_p:"Queste macchine richiedono un lettore Bluetooth J1939 affidabile. Usiamo l’OBDLink CX (Bluetooth 5.1) con un cavo Deutsch a 9 pin → OBD2: è quello che si collega in modo affidabile al bus J1939.", adapter_btn:"OBDLink CX su Amazon", affiliate_note:"In qualità di Affiliati Amazon riceviamo un compenso dagli acquisti idonei. Nessun costo aggiuntivo per te.",
       shot0_t:"Panoramica", shot0_d:"Indice di salute",
       shot1_t:"Dati live", shot1_d:"SPN in tempo reale",
       shot2_t:"Codici guasto", shot2_d:"DTC attivi e memorizzati",
@@ -776,6 +801,7 @@
       disclaim:"HeavyDiag AI legge e diagnostica tramite il bus SAE J1939. Fornisce informazioni sullo stato e suggerimenti diagnostici — non sostituisce l'assistenza professionale o gli strumenti di programmazione OEM e non disattiva i dispositivi anti-emissioni."
     },
     pl: {
+      adapter_eyebrow:"Zalecany sprzęt", adapter_h:"Sprawdzony adapter: OBDLink CX", adapter_p:"Te maszyny wymagają niezawodnego czytnika Bluetooth J1939. Używamy OBDLink CX (Bluetooth 5.1) z kablem Deutsch 9-pin → OBD2 — to ten, który niezawodnie łączy się z magistralą J1939.", adapter_btn:"OBDLink CX na Amazon", affiliate_note:"Jako uczestnik programu Amazon Associates zarabiamy na kwalifikujących się zakupach. Bez dodatkowych kosztów dla Ciebie.",
       shot0_t:"Przegląd", shot0_d:"Wskaźnik stanu",
       shot1_t:"Dane na żywo", shot1_d:"SPN w czasie rzeczywistym",
       shot2_t:"Kody usterek", shot2_d:"Aktywne i zapisane DTC",
@@ -817,6 +843,7 @@
       disclaim:"HeavyDiag AI czyta i diagnozuje przez magistralę SAE J1939. Dostarcza informacji o stanie maszyny i sugestii diagnostycznych — nie zastępuje profesjonalnego serwisu ani narzędzi programujących OEM i nie wyłącza układów emisji spalin."
     },
     ro: {
+      adapter_eyebrow:"Hardware recomandat", adapter_h:"Adaptorul care funcționează: OBDLink CX", adapter_p:"Aceste utilaje au nevoie de un cititor Bluetooth J1939 fiabil. Folosim OBDLink CX (Bluetooth 5.1) cu un cablu Deutsch cu 9 pini → OBD2 — este cel care se conectează fiabil la magistrala J1939.", adapter_btn:"OBDLink CX pe Amazon", affiliate_note:"În calitate de Asociat Amazon, câștigăm din achizițiile eligibile. Fără costuri suplimentare pentru tine.",
       shot0_t:"Prezentare", shot0_d:"Scor de stare",
       shot1_t:"Date live", shot1_d:"SPN în timp real",
       shot2_t:"Coduri de eroare", shot2_d:"DTC active și stocate",
